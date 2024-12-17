@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmarker</title>
+    <!-- رمز الموقع -->
+    <link rel="icon" href="./images/bookmark.png">
+    <!-- مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- إطار Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- ورقة الأنماط الرئيسية -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <main class="interface py-5 position-relative">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="py-2 position-relative">Bookmarker
+            </h1>
+            <div class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="site-name w-100 d-flex flex-column justify-content-center">
+                    <label for="siteName" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Name
+                    </label>
+                    <input type="text" placeholder="Bookmarker Name" class="form-control" id="siteName">
+                </div>
+                <div class="site-url w-100 d-flex flex-column justify-content-center">
+                    <label for="siteURL" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        Site URL
+                    </label>
+                    <input type="url" placeholder="Website Url" class="form-control" id="siteURL">
+                </div>
+                <button class="btn btn-submit px-5" id="addButton">Submit</button>
+            </div>
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                    <th class="text-capitalize">Index</th>
+                    <th class="text-capitalize">Website Name</th>
+                    <th class="text-capitalize">Visit</th>
+                    <th class="text-capitalize">Delete</th>
+                </thead>
+                <tbody id="bookmarksTable"></tbody>
+            </table>
+        </div>
+        <div class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none">
+            <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+                <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                    <div class="circles d-flex">
+                        <span class="rounded-circle me-2"></span>
+                        <span class="rounded-circle me-2"></span>
+                        <span class="rounded-circle me-2"></span>
+                    </div>
+                    <button class="btn border-0" id="closeButton">
+                        <i class="fa-solid fa-xmark close fs-3"></i>
+                    </button>
+                </header>
+                <p class="m-0 pb-2">
+                    اسم الموقع أو الرابط غير صحيح، يرجى اتباع القواعد أدناه:
+                </p>
+                <ol class="rules list-unstyled m-0">
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>
+                        يجب أن يحتوي اسم الموقع على ثلاثة أحرف على الأقل
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-circle-right p-2"></i>
+                        يجب أن يكون رابط الموقع صحيحًا
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>
